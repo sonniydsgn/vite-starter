@@ -1,0 +1,39 @@
+{
+  "name": "example-project",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "html": "node-w3c-validator -f lint -evH -i dist/**/*.html",
+    "dev": "vite",
+    "dev:host": "vite --host",
+    "build": "vite build --emptyOutDir",
+    "preview": "vite preview",
+    "preview:host": "vite preview --host"
+  },
+  "devDependencies": {
+    "lightningcss": "^1.21.7",
+    "vite": "^4.4.5"
+  },
+  "dependencies": {
+    "autoprefixer": "^10.4.15",
+    "node-w3c-validator": "^2.0.2",
+    "postcss": "^8.4.29",
+    "postcss-sort-media-queries": "^5.2.0",
+    "sharp": "^0.32.5",
+    "stylelint": "^15.10.3",
+    "stylelint-order": "^6.0.3",
+    "vite-plugin-handlebars": "^1.6.0",
+    "vite-plugin-html": "^3.2.0",
+    "vite-plugin-image-optimizer": "^1.1.7",
+    "vite-plugin-static-copy": "^0.17.0",
+    "vite-svg-sprite-wrapper": "^1.1.0"
+  },
+  "staticFiles": {
+    "staticPath": [
+      {
+        "staticPath": "src",
+        "staticOutDir": "assets"
+      }
+    ]
+  }
+}

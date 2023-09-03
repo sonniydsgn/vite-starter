@@ -1,0 +1,8 @@
+/* базовые подключения */
+@import "_vars.css";
+@import "_mixins.css";
+@import "_fonts.css";
+@import "_settings.css";
+
+/* подключения компонентов страницы */
+@import "./components/_header.css";
