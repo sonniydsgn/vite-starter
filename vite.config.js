@@ -3,7 +3,6 @@ import { viteStaticCopy } from 'vite-plugin-static-copy'
 import ViteSvgSpriteWrapper from 'vite-svg-sprite-wrapper';
 import { ViteImageOptimizer } from 'vite-plugin-image-optimizer';
 import { createHtmlPlugin } from 'vite-plugin-html'
-import { resolve } from 'path';
 import handlebars from 'vite-plugin-handlebars';
 
 export default defineConfig({
@@ -26,6 +25,13 @@ export default defineConfig({
         //         },
         //     ],
         // }),
+        handlebars({
+          partialDirectory: 'src/partials',
+        }),
+        ViteSvgSpriteWrapper({
+          icons: 'src/img/svg/*.svg',
+          outputDir: 'src/img'
+        }),
         ViteImageOptimizer({
           exclude: 'sprite.svg',
           svg: {
@@ -36,16 +42,12 @@ export default defineConfig({
           jpg: {
             quality: 75
           },
+          jpeg: {
+            quality: 75
+          },
           png: {
             quality: 75
           }
-        }),
-        handlebars({
-          partialDirectory: 'src/partials',
-        }),
-        ViteSvgSpriteWrapper({
-          icons: 'src/img/svg/*.svg',
-          outputDir: 'src/img'
         }),
         createHtmlPlugin({
           minify: true

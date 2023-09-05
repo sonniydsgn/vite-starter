@@ -1,14 +1,22 @@
 :root {
   /* base */
-  --font-family: "Open Sans", sans-serif;
+  --font-family: "MullerRegular", sans-serif;
   --content-width: 1170px;
   --container-offset: 15px;
   --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
 
+  /* line-height */
+  --lh-primary: 100%;
+
   /* fonts */
+  --font-primary: 16px;
 
   /* colors */
   --light-color: #fff;
 
   /* media */
+  @custom-media --laptop (width <= 1200px);
+  @custom-media --tablet (width <= 1024px);
+  @custom-media --mobile (width <= 768px);
+  @custom-media --small-mobile (width <= 360px);
 }

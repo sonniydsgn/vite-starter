@@ -1,6 +1,6 @@
 /* базовые подключения */
+@import "_vendor.css";
 @import "_vars.css";
-@import "_mixins.css";
 @import "_fonts.css";
 @import "_settings.css";
 
