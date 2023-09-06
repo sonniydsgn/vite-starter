@@ -1,8 +1,9 @@
 import { defineConfig } from 'vite'
+import { splitVendorChunkPlugin } from 'vite';
 import { viteStaticCopy } from 'vite-plugin-static-copy'
-import ViteSvgSpriteWrapper from 'vite-svg-sprite-wrapper';
 import { ViteImageOptimizer } from 'vite-plugin-image-optimizer';
 import { createHtmlPlugin } from 'vite-plugin-html'
+import ViteSvgSpriteWrapper from 'vite-svg-sprite-wrapper';
 import handlebars from 'vite-plugin-handlebars';
 
 export default defineConfig({
@@ -13,18 +14,18 @@ export default defineConfig({
       cssMinify: 'lightningcss'
     },
     plugins: [
-        // viteStaticCopy({
-        //     targets: [
-        //         {
-        //           src: './resources/phpmailer',
-        //           dest: './',
-        //         },
-        //         {
-        //           src: './resources/send.php',
-        //           dest: './',
-        //         },
-        //     ],
-        // }),
+        viteStaticCopy({
+            targets: [
+                {
+                  src: './resources/phpmailer',
+                  dest: './',
+                },
+                {
+                  src: './resources/send.php',
+                  dest: './',
+                },
+            ],
+        }),
         handlebars({
           partialDirectory: 'src/partials',
         }),
@@ -51,6 +52,7 @@ export default defineConfig({
         }),
         createHtmlPlugin({
           minify: true
-        })
+        }),
+        splitVendorChunkPlugin()
     ]
 })

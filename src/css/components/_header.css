@@ -1,6 +1,12 @@
+main {
+  display: grid;
+  place-content: center;
+  height: 100vh;
+}
+
 h1 {
-  color: green;
-  font-size: 64px;
+  margin-bottom: 24px;
+  font-size: 48px;
 
   @media (--mobile) {
     font-size: 32px;

@@ -1,7 +1,8 @@
 import JustValidate from 'just-validate';
 import Inputmask from "inputmask";
 
-export const validateForms = (selector, rules, afterSend) => {
+//? функция валидации
+const validateForms = (selector, rules, afterSend) => {
   const form = document?.querySelector(selector);
   const telSelector = form?.querySelector('input[type="tel"]');
 
@@ -63,3 +64,42 @@ export const validateForms = (selector, rules, afterSend) => {
   })
 
 };
+
+//? правила валидации
+const rules1 = [
+  {
+    ruleSelector: '#name',
+    rules: [
+      {
+        rule: 'maxLength',
+        value: 30,
+        errorMessage: 'Пожалуйста, укажите более короткий вариант имени, до 30 символов'
+      },
+      {
+        rule: 'required',
+        value: true,
+        errorMessage: 'Пожалуйста, укажите имя'
+      }
+    ]
+  },
+  {
+    ruleSelector: '#tel',
+    tel: true,
+    telError: 'Недопустимый формат номера',
+    rules: [
+      {
+        rule: 'required',
+        value: true,
+        errorMessage: 'Пожалуйста, укажите номер телефона'
+      }
+    ]
+  },
+];
+
+//? функция при успешной отправки
+const success = () => {
+  console.log('send');
+}
+
+//? вызов валидации
+validateForms('', rules1, success);

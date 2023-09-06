@@ -1,5 +1,6 @@
-// css
+// дефолт
 import "../css/main.css";
+import "./_functions";
 
-// js
-import "./components/_test";
+// компоненты
+import "./components/_love";
