@@ -1,5 +1,4 @@
-// дефолт
-import "../css/main.css";
+// функции
 import "./_functions";
 
 // компоненты
