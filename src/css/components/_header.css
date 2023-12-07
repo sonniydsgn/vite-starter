@@ -1,14 +1,14 @@
 main {
-  display: grid;
-  place-content: center;
-  height: 100vh;
+	display: grid;
+	place-content: center;
+	height: 100vh;
 }
 
 h1 {
-  margin-bottom: 24px;
-  font-size: 48px;
+	font-size: 48px;
+	margin-bottom: 24px;
 
-  @media (--mobile) {
-    font-size: 32px;
-  }
+	@media (--mobile) {
+		font-size: 32px;
+	}
 }

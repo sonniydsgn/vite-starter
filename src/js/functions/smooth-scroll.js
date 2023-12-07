@@ -5,21 +5,21 @@ import Lenis from '@studio-freight/lenis'
 export const lenis = new Lenis()
 
 function raf(time) {
-  lenis.raf(time)
-  requestAnimationFrame(raf)
+	lenis.raf(time)
+	requestAnimationFrame(raf)
 }
 requestAnimationFrame(raf)
 
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener('click', function (e) {
-    e.preventDefault();
-    let attr = this.getAttribute('href')
+	anchor.addEventListener('click', function (e) {
+		e.preventDefault()
+		let attr = this.getAttribute('href')
 
-    //? закрывать модальное окно при нажатии на ссылки навигации
-    // if (this.classList.contains('nav__link')) {
-    //   modal.close('nav')
-    // }
+		//? закрывать модальное окно при нажатии на ссылки навигации
+		// if (this.classList.contains('nav__link')) {
+		//   modal.close('nav')
+		// }
 
-    lenis.scrollTo(attr, {duration: 3})
-  });
+		lenis.scrollTo(attr, { duration: 3 })
+	})
 })

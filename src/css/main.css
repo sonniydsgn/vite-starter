@@ -1,8 +1,8 @@
 /* базовые подключения */
-@import "_vendor.css";
-@import "_vars.css";
-@import "_fonts.css";
-@import "_settings.css";
+@import '_vendor.css';
+@import '_vars.css';
+@import '_fonts.css';
+@import '_settings.css';
 
 /* подключения компонентов страницы */
-@import "./components/_header.css";
+@import './components/_header.css';

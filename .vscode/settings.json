@@ -1,0 +1,12 @@
+{
+	"editor.formatOnSave": true,
+	"files.associations": {
+		"*.css": "postcss"
+	},
+	"[javascript]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode",
+		"editor.codeActionsOnSave": {
+			"source.fixAll": true // работает аналогично eslint --fix
+		}
+	}
+}

@@ -1,5 +1,5 @@
 // функции
-import "./_functions";
+import './_functions'
 
 // компоненты
-import "./components/_love";
+import './components/_love'
