@@ -88,3 +88,8 @@ a {
 .js-focus-visible :focus:not(.focus-visible) {
 	outline: none;
 }
+/*
+@custom-media --laptop (max-width: 1200px);
+@custom-media --tablet (max-width: 1024px);
+@custom-media --mobile (max-width: 768px);
+@custom-media --small-mobile (max-width: 360px); */

@@ -1,14 +1,10 @@
-main {
+.main {
 	display: grid;
 	place-content: center;
 	height: 100vh;
-}
 
-h1 {
-	font-size: 48px;
-	margin-bottom: 24px;
-
-	@media (--mobile) {
-		font-size: 32px;
+	&__text {
+		font-size: 48px;
+		margin-bottom: 24px;
 	}
 }

@@ -8,7 +8,6 @@ import handlebars from 'vite-plugin-handlebars'
 
 export default defineConfig({
 	root: 'src',
-	publicDir: 'src',
 	build: {
 		outDir: '../dist',
 		cssMinify: 'lightningcss'
@@ -17,11 +16,11 @@ export default defineConfig({
 		viteStaticCopy({
 			targets: [
 				{
-					src: './resources/phpmailer',
+					src: '../public/phpmailer',
 					dest: './'
 				},
 				{
-					src: './resources/send.php',
+					src: '../public/send.php',
 					dest: './'
 				}
 			]

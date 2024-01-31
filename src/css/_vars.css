@@ -1,6 +1,6 @@
 :root {
 	/* base */
-	--font-family: 'MullerRegular', sans-serif;
+	--font-family: 'Muller', sans-serif;
 	--content-width: 1170px;
 	--container-offset: 15px;
 	--container-width: calc(var(--content-width) + (var(--container-offset) * 2));
@@ -13,10 +13,4 @@
 
 	/* colors */
 	--light-color: #fff;
-
-	/* media */
-	@custom-media --laptop (width <= 1200px);
-	@custom-media --tablet (width <= 1024px);
-	@custom-media --mobile (width <= 768px);
-	@custom-media --small-mobile (width <= 360px);
 }
